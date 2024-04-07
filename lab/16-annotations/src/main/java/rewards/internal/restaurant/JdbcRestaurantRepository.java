@@ -160,10 +160,10 @@ public class JdbcRestaurantRepository implements RestaurantRepository {
 	 * Helper method that clears the cache of restaurants.
 	 * This method should be called when a bean is destroyed.
 	 *
-	 * TODO-10: Add a scheme to check if this method is being invoked
+	 * -10: Add a scheme to check if this method is being invoked
 	 * - Add System.out.println to this method.
 	 *
-	 * TODO-11: Have this method to be invoked before a bean gets destroyed
+	 * -11: Have this method to be invoked before a bean gets destroyed
 	 * - Re-run RewardNetworkTests.
 	 * - Observe this method is not called.
 	 * - Use an appropriate annotation to register this method for a
