@@ -22,7 +22,7 @@ import javax.sql.DataSource;
  * - Save all changes, Re-run the RewardNetworkTests.  It should now pass.
  */
 @Configuration
-@ComponentScan
+@ComponentScan("rewards.internal")
 public class RewardsConfig {
 
 	DataSource dataSource;
