@@ -31,8 +31,6 @@ public class RewardNetworkImplTests {
 	 * The object being tested.
 	 */
 	private RewardNetworkImpl rewardNetwork;
-
-	// TODO-09: Review the test setup
 	@BeforeEach
 	public void setUp() throws Exception {
 		// Create stubs to facilitate fast in-memory testing with
@@ -44,12 +42,7 @@ public class RewardNetworkImplTests {
 		// Setup the object being tested by handing what it needs to work
 		rewardNetwork = new RewardNetworkImpl(accountRepo, restaurantRepo, rewardRepo);
 	}
-
-	// TODO-10: Test RewardNetworkImpl class
-	// - Remove the @Disabled annotation below.
-	// - Run this JUnit test. Verify it passes.
 	@Test
-	@Disabled
 	public void testRewardForDining() {
 		// create a new dining of 100.00 charged to credit card '1234123412341234' by merchant '123457890' as test input
 		Dining dining = Dining.createDining("100.00", "1234123412341234", "1234567890");
