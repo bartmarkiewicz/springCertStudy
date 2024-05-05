@@ -2,6 +2,7 @@ package rewards.internal;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 
 import org.springframework.orm.ObjectRetrievalFailureException;
 
@@ -29,7 +30,7 @@ public class StubAccountRepository implements AccountRepository {
 		accountsByCreditCard.put("1234123412341234", account);
 	}
 
-	public Account findByCreditCard(String creditCardNumber) {
+	public Account findByCreditCardNumber(String creditCardNumber) {
 		Account account = accountsByCreditCard.get(creditCardNumber);
 		if (account == null) {
 			throw new ObjectRetrievalFailureException(Account.class, creditCardNumber);
@@ -39,5 +40,65 @@ public class StubAccountRepository implements AccountRepository {
 
 	public void updateBeneficiaries(Account account) {
 		// nothing to do, everything is in memory
+	}
+
+	@Override
+	public <S extends Account> S save(S entity) {
+		return null;
+	}
+
+	@Override
+	public <S extends Account> Iterable<S> saveAll(Iterable<S> entities) {
+		return null;
+	}
+
+	@Override
+	public Optional<Account> findById(Long aLong) {
+		return Optional.empty();
+	}
+
+	@Override
+	public boolean existsById(Long aLong) {
+		return false;
+	}
+
+	@Override
+	public Iterable<Account> findAll() {
+		return null;
+	}
+
+	@Override
+	public Iterable<Account> findAllById(Iterable<Long> longs) {
+		return null;
+	}
+
+	@Override
+	public long count() {
+		return 0;
+	}
+
+	@Override
+	public void deleteById(Long aLong) {
+
+	}
+
+	@Override
+	public void delete(Account entity) {
+
+	}
+
+	@Override
+	public void deleteAllById(Iterable<? extends Long> longs) {
+
+	}
+
+	@Override
+	public void deleteAll(Iterable<? extends Account> entities) {
+
+	}
+
+	@Override
+	public void deleteAll() {
+
 	}
 }
