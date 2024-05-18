@@ -2,6 +2,7 @@ package rewards.internal;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 
 import org.springframework.orm.ObjectRetrievalFailureException;
 
@@ -32,12 +33,72 @@ public class StubRestaurantRepository implements RestaurantRepository {
 		restaurantsByMerchantNumber.put(restaurant.getNumber(), restaurant);
 	}
 
-	public Restaurant findByMerchantNumber(String merchantNumber) {
+	public Restaurant findByNumber(String merchantNumber) {
 		Restaurant restaurant = (Restaurant) restaurantsByMerchantNumber.get(merchantNumber);
 		if (restaurant == null) {
 			throw new ObjectRetrievalFailureException(Restaurant.class, merchantNumber);
 		}
 		return restaurant;
+	}
+
+	@Override
+	public <S extends Restaurant> S save(S entity) {
+		return null;
+	}
+
+	@Override
+	public <S extends Restaurant> Iterable<S> saveAll(Iterable<S> entities) {
+		return null;
+	}
+
+	@Override
+	public Optional<Restaurant> findById(Long aLong) {
+		return Optional.empty();
+	}
+
+	@Override
+	public boolean existsById(Long aLong) {
+		return false;
+	}
+
+	@Override
+	public Iterable<Restaurant> findAll() {
+		return null;
+	}
+
+	@Override
+	public Iterable<Restaurant> findAllById(Iterable<Long> longs) {
+		return null;
+	}
+
+	@Override
+	public long count() {
+		return 0;
+	}
+
+	@Override
+	public void deleteById(Long aLong) {
+
+	}
+
+	@Override
+	public void delete(Restaurant entity) {
+
+	}
+
+	@Override
+	public void deleteAllById(Iterable<? extends Long> longs) {
+
+	}
+
+	@Override
+	public void deleteAll(Iterable<? extends Restaurant> entities) {
+
+	}
+
+	@Override
+	public void deleteAll() {
+
 	}
 
 	/**
