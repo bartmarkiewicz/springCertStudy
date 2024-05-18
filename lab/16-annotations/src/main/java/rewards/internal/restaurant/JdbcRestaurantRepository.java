@@ -88,7 +88,7 @@ public class JdbcRestaurantRepository implements RestaurantRepository {
 	 */
 
 	/*
-	 * TODO-09: Make this method to be invoked after a bean gets created
+	 * -09: Make this method to be invoked after a bean gets created
 	 * - Mark this method with an annotation that will cause it to be
 	 *   executed by Spring after constructor & setter initialization has occurred.
 	 * - Re-run the RewardNetworkTests test. You should see the test succeeds.
